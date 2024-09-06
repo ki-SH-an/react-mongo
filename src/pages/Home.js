@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { Box, Button, Typography, Grid, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./pages/Home.css";
+import "./Home.css";
 import comImage from "./com.gif"; // Ensure this path is correct
 
 const Home = () => {
