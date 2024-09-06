@@ -1,0 +1,64 @@
+.hero-buttons button {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: none;
+}
+
+.hero-buttons button:first-of-type {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.hero-buttons button:last-of-type {
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+/* Login and Registration Styles */
+.login-container, .register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box, .register-box {
+  width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10%);
+}
+
+.login-title, .register-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-field {
+  margin-bottom: 1rem;
+}
+
+.login-button, .register-button {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.login-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+.login-footer a {
+  color: #6c63ff;
+  font-weight: 500;
+  text-decoration: none;
+}

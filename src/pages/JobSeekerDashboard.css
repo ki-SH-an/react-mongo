@@ -1,0 +1,254 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-left .logo {
+ 
+  width: 120px; /* Logo width */
+  height: 20px; /* Logo height */
+  margin-right: -50px; /* Adjusts logo position */
+}
+
+
+.navbar-center {
+  max-width: 250px;
+  background: #151515; /* Dark gray background for buttons */
+  border-radius: 40px; /* Rounded corners */
+  display: flex;
+  gap: 10px; /* Equal gap between buttons */
+  padding: 10px; /* Padding around buttons */
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  flex-grow: 1;
+}
+.logo{
+  width: 120px; /* Logo width */
+  height: 20px; /* Logo height */
+  margin-right: -50px; /* Adjusts logo position */
+}
+.toggle-button {
+  background: #000; /* Black background for buttons */
+  color: #fff; /* White text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding inside buttons */
+  border-radius: 20px; /* Rounded edges */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+
+.toggle-button.active {
+  background: #007bff; /* Blue background for active button */
+  color: #fff; /* White text color */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* Flash effect */
+}
+
+
+.toggle-button.active::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: rgba(0, 123, 255, 0.5); /* Flash color */
+  border-radius: 50%;
+  z-index: -1; /* Behind the button */
+  animation: flash 1s infinite; /* Flicker effect */
+}
+
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.navbar-right .account-image {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #ffffff; /* White background for sidebar */
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+
+.close-btn {
+  background: #ff4d4d; /* Red background for close button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  float: right;
+}
+
+
+.profile-section {
+  text-align: center;
+}
+
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.edit-dp-btn {
+  background: #007bff; /* Blue background for change logo button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.profile-details {
+  margin-top: 20px;
+}
+
+
+.profile-details label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.profile-details input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+
+.edit-details-btn {
+  background: #007bff; /* Blue background for save changes button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+/* Main Content */
+.dashboard-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.search-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+
+/* Listings Flex Container */
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+}
+
+
+/* Card Styling */
+.listing-card {
+  background: #ffffff; /* White background for cards */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.333% - 20px); /* Three cards per row with spacing */
+  max-width: calc(33.333% - 20px); /* Ensure cards fit within flex container */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/* Card Hover Effect */
+.listing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Card Text Styling */
+.listing-title {
+  font-size: 1.25em;
+  color: #000; /* Black text for titles */
+  font-weight: bold; /* Bolder text */
+  margin-top: 0;
+}
+
+
+.listing-company, .listing-location, .listing-salary, .listing-role, .listing-stipend, .listing-skills {
+  font-size: 0.9em;
+  color: #000; /* Black text */
+  font-weight: bold; /* Bolder text */
+  margin: 10px 0;
+}
+
+
+.no-listings {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888; /* Grey color for no listings message */
+}
