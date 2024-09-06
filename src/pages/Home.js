@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from "react";
 import { Box, Button, Typography, Grid, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./https://github.com/ki-SH-an/react-mongo/blob/main/src/pages/Home.css";
-import comImage from "./https://github.com/ki-SH-an/react-mongo/blob/main/src/pages/com.gif"; // Ensure this path is correct
+import "./pages/Home.css";
+import comImage from "./com.gif"; // Ensure this path is correct
 
 const Home = () => {
   useEffect(() => {
