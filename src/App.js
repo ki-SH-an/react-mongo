@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '.https://github.com/ki-SH-an/react-mongo/blob/main/src/pages/Home.js';
+import Home from './pages/Home.js';
 import JobMakerLogin from './pages/jobmaker-login';
 import JobMakerRegister from './pages/jobmaker-register';
 import JobSeekerLogin from './pages/jobseeker-login';
